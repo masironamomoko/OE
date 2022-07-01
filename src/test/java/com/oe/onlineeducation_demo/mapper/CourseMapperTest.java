@@ -4,14 +4,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
-class UsersMapperTest {
-    @Autowired
-    private UsersMapper mapper;
+class CourseMapperTest {
+@Autowired
+    private CourseMapper mapper;
+
     @Test
-    void test(){
+    void delete(){
+        mapper.deleteById(1);
+    }
+    @Test
+    void search(){
         mapper.selectList(null).forEach(System.out::println);
     }
 }

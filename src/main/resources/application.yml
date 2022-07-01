@@ -4,3 +4,24 @@ Spring:
     url: jdbc:mysql://localhost:3306/online_education?userUnicode=true&characterEncoding-UTF-8
     username: root
     password: 123456
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    mode: HTML
+    cache: false
+    suffix: .html
+  servlet:
+    multipart: #设置上传文件大小
+      enabled: true
+      max-file-size: 20MB #设置单个文件的大小
+      max-request-size: 20MB #设置单次请求的文件的总大小
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
